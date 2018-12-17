@@ -5,6 +5,8 @@ Spyder Editor
 This is a temporary script file.
 """
 
+start =  '37'
+recipes = '030121'
 
 def get_next(r_list, recipes, l1,l2):
     # while list(recipes) != r_list[-7:]:
@@ -17,13 +19,10 @@ def get_next(r_list, recipes, l1,l2):
     else:
         return ''.join(r_list[int(recipes):int(recipes)+10])
         #return r_list
-    
-start =  '37'
-recipes = '030121'
+#    
 
-a = get_next(list(start),recipes,0,1)
-print(a)
 
+#
 def get_index(r_list, recipes, l1,l2):
     # while list(recipes) != r_list[-7:]:
     while r_list[-len(recipes):] != list(recipes):
@@ -33,8 +32,8 @@ def get_index(r_list, recipes, l1,l2):
         l2 = (int(r_list[l2])+l2+1) % len(r_list)
         
     else:
-        return len(r_list) - len(recipes)
-
-    
+        return ''.join(r_list).index(recipes)
+#
+#    
 b = get_index(list(start), recipes,0,1)
 print(b)
